@@ -46,7 +46,7 @@ class ProductItem extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 40,
+                      height: 50,
                       child: Text(
                         "${product.brand} ${product.name}",
                         style: const TextStyle(
@@ -73,35 +73,38 @@ class ProductItem extends StatelessWidget {
                       onRatingUpdate: (rating) {},
                     ),
                     sbh(8),
-                    Row(
-                      children: [
-                        Text(
-                          "Rs. ${discountedPrice.round()} ",
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 17,
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Row(
+                        children: [
+                          Text(
+                            "Rs. ${discountedPrice.round()} ",
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 17,
+                            ),
                           ),
-                        ),
-                        Text(
-                          "Rs. ${product.price.round()}",
-                          style: const TextStyle(
-                            color: Colors.grey,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 15,
-                            decorationColor: Colors.grey,
-                            decoration: TextDecoration.lineThrough,
+                          Text(
+                            "Rs. ${product.price.round()}",
+                            style: const TextStyle(
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
+                              decorationColor: Colors.grey,
+                              decoration: TextDecoration.lineThrough,
+                            ),
                           ),
-                        ),
-                        sbw(5),
-                        const Text(
-                          "-10%",
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 15,
+                          sbw(5),
+                          const Text(
+                            "-10%",
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),

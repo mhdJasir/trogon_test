@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 sideTitle("Top rated"),
                 sbh(10),
                 SizedBox(
-                  height: context.height * 0.3,
+                  height: context.height * 0.31,
                   child: ListView.separated(
                     itemCount: controller.topRated.length,
                     scrollDirection: Axis.horizontal,
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 sideTitle("Trending"),
                 sbh(10),
                 SizedBox(
-                  height: context.height * 0.3,
+                  height: context.height * 0.31,
                   child: ListView.separated(
                     itemCount: controller.trending.length,
                     scrollDirection: Axis.horizontal,
